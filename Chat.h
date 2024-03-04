@@ -5,22 +5,42 @@
 #ifndef TOMMASO_PUZZO_CHATUTENTI_CHAT_H
 #define TOMMASO_PUZZO_CHATUTENTI_CHAT_H
 
-#endif //TOMMASO_PUZZO_CHATUTENTI_CHAT_H
+
+#include <iostream>
+#include <vector>
+#include <memory>
+
+using namespace std;
 
 
-#include "Subject.h"
-
-
-class Chat : public Subject {
+class Chat {
 
 private:
 
-    std::shared_ptr<User> user1;
+    shared_ptr<User> user1;
 
-    std::shared_ptr<User> user2;
+    shared_ptr<User> user2;
 
-    std::vector<std::shared_ptr<Message>> messages;
+    vector<shared_ptr<Message>> messages;
 
 public:
 
+    Chat (const shared_ptr<User> &user1, const shared_ptr<User> &user2);
+
+    ~Chat();
+
+
+    const shared_ptr<User> &getUser1() const;
+
+    const shared_ptr<User> &getUser2() const;
+
+
+    void addMessage(const shared_ptr<Message> &message);
+
+    void displayChat() const;
+
 };
+
+
+
+#endif //TOMMASO_PUZZO_CHATUTENTI_CHAT_H
