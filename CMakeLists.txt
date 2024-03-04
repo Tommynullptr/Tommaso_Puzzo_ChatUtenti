@@ -7,4 +7,8 @@ add_executable(Tommaso_Puzzo_ChatUtenti main.cpp
         ChatLog.cpp
         ChatLog.h
         Chat.cpp
-        Chat.h)
+        Chat.h
+        Message.cpp
+        Message.h
+        User.cpp
+        User.h)

@@ -6,11 +6,8 @@
 #define TOMMASO_PUZZO_CHATUTENTI_CHAT_H
 
 
-#include <iostream>
-#include <vector>
-#include <memory>
 
-using namespace std;
+#include "Message.h"
 
 
 class Chat {
