@@ -11,11 +11,14 @@
 #include <memory>
 #include <string>
 #include <vector>
+#include "Chat.h"
+#include "Message.h"
+
 
 using namespace std;
 
 
-class User {
+class User : public enable_shared_from_this<User> {
 
 private:
 
@@ -37,6 +40,11 @@ public:
     const string &getName() const;
 
     const string &getSurname() const;
+
+    //implement a method to create a new message sendMessage with this user as sender and add it to the chat between this user and another user
+    // if the chat doesn't exist create a new chat between this user and the other user
+
+    void sendMessage(const string &object, shared_ptr<User> receiver);
 
 };
 

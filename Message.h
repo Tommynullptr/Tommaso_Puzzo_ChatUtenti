@@ -24,7 +24,7 @@ private:
 
 public:
 
-    Message (const string &object, const string &text, const shared_ptr<User> &sender, const shared_ptr<User> &receiver);
+    Message (const string &object, const shared_ptr<User> &sender, const shared_ptr<User> &receiver);
 
     ~Message();
 
