@@ -87,7 +87,9 @@ bool User::findChat(const shared_ptr<User> &user) {
 
 shared_ptr<Chat> User::CreateChatWith(const shared_ptr<User> &user) {
 
-    shared_ptr<Chat> chat = make_shared<Chat>(shared_from_this(), user);
+    shared_ptr<Chat> chat = make_shared<Chat>();
+    chat->setUser1(shared_from_this());
+    chat->setUser2(user);
     addChat(chat);
     user->addChat(chat);
     return chat;

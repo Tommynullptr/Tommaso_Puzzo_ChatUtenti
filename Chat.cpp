@@ -5,7 +5,7 @@
 #include "Chat.h"
 
 
-Chat::Chat(const shared_ptr<User> &user1, const shared_ptr<User> &user2) : user1(user1), user2(user2) {
+Chat::Chat() {
 }
 
 Chat::~Chat() {
@@ -21,6 +21,18 @@ const shared_ptr<User> &Chat::getUser1() const {
 const shared_ptr<User> &Chat::getUser2() const {
 
     return user2;
+
+}
+
+void Chat::setUser1(const shared_ptr<User> &user1) {
+
+    Chat::user1 = user1;
+
+}
+
+void Chat::setUser2(const shared_ptr<User> &user2) {
+
+    Chat::user2 = user2;
 
 }
 

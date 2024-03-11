@@ -22,7 +22,7 @@ private:
 
 public:
 
-    Chat (const shared_ptr<User> &user1, const shared_ptr<User> &user2);
+    Chat ();
 
     ~Chat();
 
@@ -30,6 +30,10 @@ public:
     const shared_ptr<User> &getUser1() const;
 
     const shared_ptr<User> &getUser2() const;
+
+    void setUser1(const shared_ptr<User> &user1);
+
+    void setUser2(const shared_ptr<User> &user2);
 
 
     void addMessage(const shared_ptr<Message> &message);
