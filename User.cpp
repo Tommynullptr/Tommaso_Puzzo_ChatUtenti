@@ -31,18 +31,67 @@ const string &User::getSurname() const {
 
 }
 
-//implement sendMessage: it creates a new message with the current user as sender and adds it to the chat between the current user and the receiver, if a chat doesn't exist it creates a new chat between the current user and the receiver and i do this thanks to a method findOrCreateChat
+void User::addChat(const shared_ptr<Chat> &chat) {
 
-void User::sendMessage(const string &object, shared_ptr<User> receiver) {
-
-    shared_ptr<Message> message(new Message(object, shared_ptr<User>(this), receiver));
-
-    shared_ptr<Chat> chat = findOrCreateChat(shared_from_this(), receiver);
-
-    chat->addMessage(message);
+    chats.push_back(chat);
 
 }
 
-//implement findOrCreateChat: it finds the chat between the current user and the receiver, if it doesn't exist it creates a new chat between the current user and the receiver
+
+
+void User::sendMessage(const shared_ptr<Message> &message, const shared_ptr<User> &receiver) {
+
+    message->setSender(shared_from_this());
+    message->setReceiver(receiver);
+
+    if (findChat(receiver)) {
+
+        for (const auto& chat : chats) {
+
+            if (chat->getUser1() == receiver || chat->getUser2() == receiver) {
+
+                chat->addMessage(message);
+
+            }
+
+        }
+
+    } else {
+
+        shared_ptr<Chat> chat = CreateChatWith(receiver);
+        chat->addMessage(message);
+
+    }
+
+}
+
+
+
+bool User::findChat(const shared_ptr<User> &user) {
+
+    for (const auto& chat : chats) {
+
+        if (chat->getUser1() == user || chat->getUser2() == user) {
+
+            return true;
+
+        }
+
+    }
+
+    return false;
+
+}
+
+
+
+shared_ptr<Chat> User::CreateChatWith(const shared_ptr<User> &user) {
+
+    shared_ptr<Chat> chat = make_shared<Chat>(shared_from_this(), user);
+    addChat(chat);
+    user->addChat(chat);
+    return chat;
+
+}
 
 

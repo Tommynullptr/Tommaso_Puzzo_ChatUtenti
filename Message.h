@@ -24,7 +24,7 @@ private:
 
 public:
 
-    Message (const string &object, const shared_ptr<User> &sender, const shared_ptr<User> &receiver);
+    Message (const string &object);
 
     ~Message();
 
@@ -38,6 +38,10 @@ public:
     const shared_ptr<User> &getReceiver() const;
 
     void setText();
+
+    void setSender(const shared_ptr<User> &sender);
+
+    void setReceiver(const shared_ptr<User> &receiver);
 
 };
 

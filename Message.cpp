@@ -5,7 +5,7 @@
 #include "Message.h"
 
 
-Message::Message(const string &object, const shared_ptr<User> &sender, const shared_ptr<User> &receiver) : object(object), sender(sender), receiver(receiver) {
+Message::Message(const string &object) : object(object) {
 
     setText();
 
@@ -43,5 +43,17 @@ void Message::setText() {
 
     cout << "Insert the text of the message" << endl;
     cin >> text;
+
+}
+
+void Message::setSender(const shared_ptr<User> &sender) {
+
+    Message::sender = sender;
+
+}
+
+void Message::setReceiver(const shared_ptr<User> &receiver) {
+
+    Message::receiver = receiver;
 
 }
