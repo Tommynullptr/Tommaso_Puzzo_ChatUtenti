@@ -13,6 +13,7 @@ User::~User() {
 }
 
 
+
 const string &User::getNickname() const {
 
     return nickname;
@@ -31,20 +32,20 @@ const string &User::getSurname() const {
 
 }
 
+
+
 void User::addChat(const shared_ptr<Chat> &chat) {
 
     chats.push_back(chat);
 
 }
 
-
-
 void User::sendMessage(const shared_ptr<Message> &message, const shared_ptr<User> &receiver) {
 
     message->setSender(shared_from_this());
     message->setReceiver(receiver);
 
-    if (findChat(receiver)) {
+    if (findChatWith(receiver)) {
 
         for (const auto& chat : chats) {
 
@@ -67,7 +68,7 @@ void User::sendMessage(const shared_ptr<Message> &message, const shared_ptr<User
 
 
 
-bool User::findChat(const shared_ptr<User> &user) {
+bool User::findChatWith(const shared_ptr<User> &user) {
 
     for (const auto& chat : chats) {
 
@@ -90,8 +91,10 @@ shared_ptr<Chat> User::CreateChatWith(const shared_ptr<User> &user) {
     shared_ptr<Chat> chat = make_shared<Chat>();
     chat->setUser1(shared_from_this());
     chat->setUser2(user);
+
     addChat(chat);
     user->addChat(chat);
+
     return chat;
 
 }

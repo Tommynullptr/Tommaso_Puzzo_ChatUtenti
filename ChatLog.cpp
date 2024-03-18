@@ -21,7 +21,10 @@ void ChatLog::addChat(shared_ptr<Chat> chat) {
 void ChatLog::displayChatLog() const {
 
     for (const auto& chat : chats) {
+
         chat->displayChat();
+
+
     }
 
 }

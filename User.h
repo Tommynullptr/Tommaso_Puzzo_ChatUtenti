@@ -43,12 +43,12 @@ public:
 
     const string &getSurname() const;
 
-// implement sendMessage that takes an object message, set his sender and receiver based on whom user is calling this method and adds it to a chat between the current user and the receiver, if a chat doesn't exist it creates a new chat between the current user and the receiver and i do this thanks to a method findOrCreateChat
+
     void sendMessage(const shared_ptr<Message> &message, const shared_ptr<User> &receiver);
 
     void addChat(const shared_ptr<Chat> &chat);
 
-    bool findChat(const shared_ptr<User> &user);
+    bool findChatWith(const shared_ptr<User> &user);
 
     shared_ptr<Chat> CreateChatWith(const shared_ptr<User> &user);
 
