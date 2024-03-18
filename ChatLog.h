@@ -14,11 +14,14 @@ class ChatLog {
 
 private:
 
+    static shared_ptr<ChatLog> instance;
+
     vector<shared_ptr<Chat>> chats;
 
-public:
 
     ChatLog();
+
+public:
 
     ~ChatLog();
 
@@ -26,6 +29,10 @@ public:
     void addChat(shared_ptr<Chat> chat);
 
     void displayChatLog () const;
+
+    static shared_ptr<ChatLog> getInstance();
+
+    static void destroyInstance();
 
 };
 

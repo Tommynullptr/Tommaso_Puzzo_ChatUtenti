@@ -5,6 +5,10 @@
 #include "ChatLog.h"
 
 
+
+shared_ptr<ChatLog> ChatLog::instance = nullptr;
+
+
 ChatLog::ChatLog() {
 }
 
@@ -26,5 +30,21 @@ void ChatLog::displayChatLog() const {
 
 
     }
+
+}
+
+shared_ptr<ChatLog> ChatLog::getInstance() {
+
+    if (!instance) {
+        instance = shared_ptr<ChatLog>(new ChatLog);
+    }
+
+    return instance;
+
+}
+
+void ChatLog::destroyInstance() {
+
+    instance.reset();
 
 }

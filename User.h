@@ -13,6 +13,7 @@
 #include <vector>
 #include "Chat.h"
 #include "Message.h"
+#include "ChatLog.h"
 
 
 using namespace std;

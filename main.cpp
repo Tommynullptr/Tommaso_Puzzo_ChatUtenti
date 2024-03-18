@@ -1,12 +1,8 @@
 
 
 #include "User.h"
-#include "ChatLog.h"
 
 int main() {
-
-    //crea una chatlog
-    ChatLog chatLog;
 
     //crea due users
     shared_ptr<User> user1 = make_shared<User>("Tommy37", "Tommaso", "Puzzo");
