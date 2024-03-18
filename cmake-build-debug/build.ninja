@@ -55,18 +55,6 @@ build CMakeFiles/Tommaso_Puzzo_ChatUtenti.dir/main.cpp.obj: CXX_COMPILER__Tommas
   OBJECT_DIR = CMakeFiles\Tommaso_Puzzo_ChatUtenti.dir
   OBJECT_FILE_DIR = CMakeFiles\Tommaso_Puzzo_ChatUtenti.dir
 
-build CMakeFiles/Tommaso_Puzzo_ChatUtenti.dir/Observer.cpp.obj: CXX_COMPILER__Tommaso_Puzzo_ChatUtenti_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/Observer.cpp || cmake_object_order_depends_target_Tommaso_Puzzo_ChatUtenti
-  DEP_FILE = CMakeFiles\Tommaso_Puzzo_ChatUtenti.dir\Observer.cpp.obj.d
-  FLAGS = -g -std=gnu++11 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Tommaso_Puzzo_ChatUtenti.dir
-  OBJECT_FILE_DIR = CMakeFiles\Tommaso_Puzzo_ChatUtenti.dir
-
-build CMakeFiles/Tommaso_Puzzo_ChatUtenti.dir/Subject.cpp.obj: CXX_COMPILER__Tommaso_Puzzo_ChatUtenti_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/Subject.cpp || cmake_object_order_depends_target_Tommaso_Puzzo_ChatUtenti
-  DEP_FILE = CMakeFiles\Tommaso_Puzzo_ChatUtenti.dir\Subject.cpp.obj.d
-  FLAGS = -g -std=gnu++11 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Tommaso_Puzzo_ChatUtenti.dir
-  OBJECT_FILE_DIR = CMakeFiles\Tommaso_Puzzo_ChatUtenti.dir
-
 build CMakeFiles/Tommaso_Puzzo_ChatUtenti.dir/ChatLog.cpp.obj: CXX_COMPILER__Tommaso_Puzzo_ChatUtenti_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/ChatLog.cpp || cmake_object_order_depends_target_Tommaso_Puzzo_ChatUtenti
   DEP_FILE = CMakeFiles\Tommaso_Puzzo_ChatUtenti.dir\ChatLog.cpp.obj.d
   FLAGS = -g -std=gnu++11 -fdiagnostics-color=always
@@ -79,6 +67,18 @@ build CMakeFiles/Tommaso_Puzzo_ChatUtenti.dir/Chat.cpp.obj: CXX_COMPILER__Tommas
   OBJECT_DIR = CMakeFiles\Tommaso_Puzzo_ChatUtenti.dir
   OBJECT_FILE_DIR = CMakeFiles\Tommaso_Puzzo_ChatUtenti.dir
 
+build CMakeFiles/Tommaso_Puzzo_ChatUtenti.dir/Message.cpp.obj: CXX_COMPILER__Tommaso_Puzzo_ChatUtenti_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/Message.cpp || cmake_object_order_depends_target_Tommaso_Puzzo_ChatUtenti
+  DEP_FILE = CMakeFiles\Tommaso_Puzzo_ChatUtenti.dir\Message.cpp.obj.d
+  FLAGS = -g -std=gnu++11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Tommaso_Puzzo_ChatUtenti.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tommaso_Puzzo_ChatUtenti.dir
+
+build CMakeFiles/Tommaso_Puzzo_ChatUtenti.dir/User.cpp.obj: CXX_COMPILER__Tommaso_Puzzo_ChatUtenti_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/User.cpp || cmake_object_order_depends_target_Tommaso_Puzzo_ChatUtenti
+  DEP_FILE = CMakeFiles\Tommaso_Puzzo_ChatUtenti.dir\User.cpp.obj.d
+  FLAGS = -g -std=gnu++11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Tommaso_Puzzo_ChatUtenti.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tommaso_Puzzo_ChatUtenti.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Tommaso_Puzzo_ChatUtenti
@@ -87,7 +87,7 @@ build CMakeFiles/Tommaso_Puzzo_ChatUtenti.dir/Chat.cpp.obj: CXX_COMPILER__Tommas
 #############################################
 # Link the executable Tommaso_Puzzo_ChatUtenti.exe
 
-build Tommaso_Puzzo_ChatUtenti.exe: CXX_EXECUTABLE_LINKER__Tommaso_Puzzo_ChatUtenti_Debug CMakeFiles/Tommaso_Puzzo_ChatUtenti.dir/main.cpp.obj CMakeFiles/Tommaso_Puzzo_ChatUtenti.dir/Observer.cpp.obj CMakeFiles/Tommaso_Puzzo_ChatUtenti.dir/Subject.cpp.obj CMakeFiles/Tommaso_Puzzo_ChatUtenti.dir/ChatLog.cpp.obj CMakeFiles/Tommaso_Puzzo_ChatUtenti.dir/Chat.cpp.obj
+build Tommaso_Puzzo_ChatUtenti.exe: CXX_EXECUTABLE_LINKER__Tommaso_Puzzo_ChatUtenti_Debug CMakeFiles/Tommaso_Puzzo_ChatUtenti.dir/main.cpp.obj CMakeFiles/Tommaso_Puzzo_ChatUtenti.dir/ChatLog.cpp.obj CMakeFiles/Tommaso_Puzzo_ChatUtenti.dir/Chat.cpp.obj CMakeFiles/Tommaso_Puzzo_ChatUtenti.dir/Message.cpp.obj CMakeFiles/Tommaso_Puzzo_ChatUtenti.dir/User.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Tommaso_Puzzo_ChatUtenti.dir

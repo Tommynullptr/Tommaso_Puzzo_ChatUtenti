@@ -5,29 +5,37 @@
 #ifndef TOMMASO_PUZZO_CHATUTENTI_CHATLOG_H
 #define TOMMASO_PUZZO_CHATUTENTI_CHATLOG_H
 
-#endif //TOMMASO_PUZZO_CHATUTENTI_CHATLOG_H
 
 
-#include "Subject.h"
 #include "Chat.h"
 
 
-class ChatLog : public Observer {
+class ChatLog {
 
 private:
 
-    std::vector<std::shared_ptr<Chat>> chats;
+    static shared_ptr<ChatLog> instance;
 
-public:
+    vector<shared_ptr<Chat>> chats;
+
 
     ChatLog();
+
+public:
 
     ~ChatLog();
 
 
-    void update() override;  //update dovrà chiamare addChat
+    void addChat(shared_ptr<Chat> chat);
 
-    void addChat(const std::string& message);
+    void displayChatLog () const;
+
+    static shared_ptr<ChatLog> getInstance();
+
+    static void destroyInstance();
 
 };
 
+
+
+#endif //TOMMASO_PUZZO_CHATUTENTI_CHATLOG_H
