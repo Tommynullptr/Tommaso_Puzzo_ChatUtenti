@@ -5,8 +5,8 @@
 #include "ChatLog.h"
 
 
-
 shared_ptr<ChatLog> ChatLog::instance = nullptr;
+
 
 
 ChatLog::ChatLog() {
@@ -14,6 +14,7 @@ ChatLog::ChatLog() {
 
 ChatLog::~ChatLog() {
 }
+
 
 
 void ChatLog::addChat(shared_ptr<Chat> chat) {
@@ -28,7 +29,6 @@ void ChatLog::displayChatLog() const {
 
         chat->displayChat();
 
-
     }
 
 }
@@ -36,7 +36,9 @@ void ChatLog::displayChatLog() const {
 shared_ptr<ChatLog> ChatLog::getInstance() {
 
     if (!instance) {
+
         instance = shared_ptr<ChatLog>(new ChatLog);
+
     }
 
     return instance;

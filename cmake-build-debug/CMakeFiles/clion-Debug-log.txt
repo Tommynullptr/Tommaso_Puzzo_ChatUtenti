@@ -1,4 +1,4 @@
 "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Users/tomma/AppData/Local/JetBrains/CLion 2019.2.3/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti -B C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug
--- Configuring done (0.1s)
+-- Configuring done (0.5s)
 -- Generating done (0.0s)
 -- Build files have been written to: C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/cmake-build-debug

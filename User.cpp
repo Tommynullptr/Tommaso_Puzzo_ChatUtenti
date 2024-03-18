@@ -6,7 +6,6 @@
 
 
 User::User(const string &nickname, const string &name, const string &surname) : nickname(nickname), name(name), surname(surname){
-
 }
 
 User::~User() {
@@ -64,9 +63,9 @@ void User::sendMessage(const shared_ptr<Message> &message, const shared_ptr<User
 
     }
 
+    cout << "Message sent!" << endl;
+
 }
-
-
 
 bool User::findChatWith(const shared_ptr<User> &user) {
 
@@ -84,8 +83,6 @@ bool User::findChatWith(const shared_ptr<User> &user) {
 
 }
 
-
-
 shared_ptr<Chat> User::CreateChatWith(const shared_ptr<User> &user) {
 
     shared_ptr<Chat> chat = make_shared<Chat>();
@@ -97,6 +94,8 @@ shared_ptr<Chat> User::CreateChatWith(const shared_ptr<User> &user) {
 
     addChat(chat);
     user->addChat(chat);
+
+    cout << "Chat created with " << user->getName() << endl;
 
     return chat;
 

@@ -15,6 +15,7 @@ Message::~Message() {
 }
 
 
+
 const string &Message::getObject() const {
 
     return object;
