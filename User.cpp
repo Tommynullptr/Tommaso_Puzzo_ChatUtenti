@@ -3,6 +3,9 @@
 //
 
 #include "User.h"
+#include "ChatLog.h"
+#include "Chat.h"
+#include "Message.h"
 
 
 User::User(const string &nickname, const string &name, const string &surname) : nickname(nickname), name(name), surname(surname){

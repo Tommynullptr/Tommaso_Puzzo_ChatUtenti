@@ -11,11 +11,15 @@
 #include <memory>
 #include <string>
 #include <vector>
-#include "Chat.h"
-#include "Message.h"
-#include "ChatLog.h"
 
 using namespace std;
+
+
+class Chat;
+
+class Message;
+
+class ChatLog;
 
 
 class User : public enable_shared_from_this<User> {
