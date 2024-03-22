@@ -120,10 +120,521 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target tests
+
+
+#############################################
+# Order-only phony target for tests
+
+build cmake_object_order_depends_target_tests: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
+
+build tests/CMakeFiles/tests.dir/runAllTests.cpp.obj: CXX_COMPILER__tests_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/runAllTests.cpp || cmake_object_order_depends_target_tests
+  DEP_FILE = tests\CMakeFiles\tests.dir\runAllTests.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
+  OBJECT_DIR = tests\CMakeFiles\tests.dir
+  OBJECT_FILE_DIR = tests\CMakeFiles\tests.dir
+
+build tests/CMakeFiles/tests.dir/UserFixture.cpp.obj: CXX_COMPILER__tests_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/UserFixture.cpp || cmake_object_order_depends_target_tests
+  DEP_FILE = tests\CMakeFiles\tests.dir\UserFixture.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
+  OBJECT_DIR = tests\CMakeFiles\tests.dir
+  OBJECT_FILE_DIR = tests\CMakeFiles\tests.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target tests
+
+
+#############################################
+# Link the executable tests\tests.exe
+
+build tests/tests.exe: CXX_EXECUTABLE_LINKER__tests_Debug tests/CMakeFiles/tests.dir/runAllTests.cpp.obj tests/CMakeFiles/tests.dir/UserFixture.cpp.obj | lib/libgtest.a lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
+  FLAGS = -g
+  LINK_LIBRARIES = lib/libgtest.a  lib/libgtest_main.a  lib/libgtest.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = tests\CMakeFiles\tests.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = tests\tests.exe
+  TARGET_IMPLIB = tests\libtests.dll.a
+  TARGET_PDB = tests.exe.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build tests/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug\tests && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build tests/edit_cache: phony tests/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build tests/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug\tests && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti -BC:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build tests/rebuild_cache: phony tests/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build tests/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build tests/CMakeFiles/install.util: CUSTOM_COMMAND tests/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug\tests && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build tests/install: phony tests/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build tests/CMakeFiles/install/local.util: CUSTOM_COMMAND tests/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug\tests && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build tests/install/local: phony tests/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build tests/CMakeFiles/install/strip.util: CUSTOM_COMMAND tests/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug\tests && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build tests/install/strip: phony tests/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build tests/googletest-main/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug\tests\googletest-main && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build tests/googletest-main/edit_cache: phony tests/googletest-main/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build tests/googletest-main/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug\tests\googletest-main && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti -BC:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build tests/googletest-main/rebuild_cache: phony tests/googletest-main/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build tests/googletest-main/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build tests/googletest-main/CMakeFiles/install.util: CUSTOM_COMMAND tests/googletest-main/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug\tests\googletest-main && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build tests/googletest-main/install: phony tests/googletest-main/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build tests/googletest-main/CMakeFiles/install/local.util: CUSTOM_COMMAND tests/googletest-main/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug\tests\googletest-main && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build tests/googletest-main/install/local: phony tests/googletest-main/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build tests/googletest-main/CMakeFiles/install/strip.util: CUSTOM_COMMAND tests/googletest-main/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug\tests\googletest-main && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build tests/googletest-main/install/strip: phony tests/googletest-main/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Order-only phony target for gmock
+
+build cmake_object_order_depends_target_gmock: phony || cmake_object_order_depends_target_gtest
+
+build tests/googletest-main/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj: CXX_COMPILER__gmock_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
+  DEP_FILE = tests\googletest-main\googlemock\CMakeFiles\gmock.dir\src\gmock-all.cc.obj.d
+  FLAGS = -g -std=c++14 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -IC:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock/include -IC:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
+  OBJECT_DIR = tests\googletest-main\googlemock\CMakeFiles\gmock.dir
+  OBJECT_FILE_DIR = tests\googletest-main\googlemock\CMakeFiles\gmock.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Link the static library lib\libgmock.a
+
+build lib/libgmock.a: CXX_STATIC_LIBRARY_LINKER__gmock_Debug tests/googletest-main/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj || lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = tests\googletest-main\googlemock\CMakeFiles\gmock.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lib\libgmock.a
+  TARGET_PDB = gmock.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Order-only phony target for gmock_main
+
+build cmake_object_order_depends_target_gmock_main: phony || cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gtest
+
+build tests/googletest-main/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj: CXX_COMPILER__gmock_main_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
+  DEP_FILE = tests\googletest-main\googlemock\CMakeFiles\gmock_main.dir\src\gmock_main.cc.obj.d
+  FLAGS = -g -std=c++14 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
+  OBJECT_DIR = tests\googletest-main\googlemock\CMakeFiles\gmock_main.dir
+  OBJECT_FILE_DIR = tests\googletest-main\googlemock\CMakeFiles\gmock_main.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Link the static library lib\libgmock_main.a
+
+build lib/libgmock_main.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug tests/googletest-main/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj || lib/libgmock.a lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = tests\googletest-main\googlemock\CMakeFiles\gmock_main.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lib\libgmock_main.a
+  TARGET_PDB = gmock_main.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build tests/googletest-main/googlemock/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug\tests\googletest-main\googlemock && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build tests/googletest-main/googlemock/edit_cache: phony tests/googletest-main/googlemock/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build tests/googletest-main/googlemock/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug\tests\googletest-main\googlemock && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti -BC:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build tests/googletest-main/googlemock/rebuild_cache: phony tests/googletest-main/googlemock/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build tests/googletest-main/googlemock/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build tests/googletest-main/googlemock/CMakeFiles/install.util: CUSTOM_COMMAND tests/googletest-main/googlemock/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug\tests\googletest-main\googlemock && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build tests/googletest-main/googlemock/install: phony tests/googletest-main/googlemock/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build tests/googletest-main/googlemock/CMakeFiles/install/local.util: CUSTOM_COMMAND tests/googletest-main/googlemock/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug\tests\googletest-main\googlemock && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build tests/googletest-main/googlemock/install/local: phony tests/googletest-main/googlemock/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build tests/googletest-main/googlemock/CMakeFiles/install/strip.util: CUSTOM_COMMAND tests/googletest-main/googlemock/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug\tests\googletest-main\googlemock && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build tests/googletest-main/googlemock/install/strip: phony tests/googletest-main/googlemock/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Order-only phony target for gtest
+
+build cmake_object_order_depends_target_gtest: phony || tests/googletest-main/googletest/CMakeFiles/gtest.dir
+
+build tests/googletest-main/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj: CXX_COMPILER__gtest_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
+  DEP_FILE = tests\googletest-main\googletest\CMakeFiles\gtest.dir\src\gtest-all.cc.obj.d
+  FLAGS = -g -std=c++14 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -IC:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -IC:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
+  OBJECT_DIR = tests\googletest-main\googletest\CMakeFiles\gtest.dir
+  OBJECT_FILE_DIR = tests\googletest-main\googletest\CMakeFiles\gtest.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Link the static library lib\libgtest.a
+
+build lib/libgtest.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug tests/googletest-main/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = tests\googletest-main\googletest\CMakeFiles\gtest.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lib\libgtest.a
+  TARGET_PDB = gtest.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Order-only phony target for gtest_main
+
+build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_depends_target_gtest
+
+build tests/googletest-main/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj: CXX_COMPILER__gtest_main_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
+  DEP_FILE = tests\googletest-main\googletest\CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj.d
+  FLAGS = -g -std=c++14 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
+  OBJECT_DIR = tests\googletest-main\googletest\CMakeFiles\gtest_main.dir
+  OBJECT_FILE_DIR = tests\googletest-main\googletest\CMakeFiles\gtest_main.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Link the static library lib\libgtest_main.a
+
+build lib/libgtest_main.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug tests/googletest-main/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj || lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = tests\googletest-main\googletest\CMakeFiles\gtest_main.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lib\libgtest_main.a
+  TARGET_PDB = gtest_main.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build tests/googletest-main/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug\tests\googletest-main\googletest && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build tests/googletest-main/googletest/edit_cache: phony tests/googletest-main/googletest/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build tests/googletest-main/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug\tests\googletest-main\googletest && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti -BC:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build tests/googletest-main/googletest/rebuild_cache: phony tests/googletest-main/googletest/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build tests/googletest-main/googletest/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build tests/googletest-main/googletest/CMakeFiles/install.util: CUSTOM_COMMAND tests/googletest-main/googletest/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug\tests\googletest-main\googletest && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build tests/googletest-main/googletest/install: phony tests/googletest-main/googletest/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build tests/googletest-main/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND tests/googletest-main/googletest/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug\tests\googletest-main\googletest && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build tests/googletest-main/googletest/install/local: phony tests/googletest-main/googletest/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build tests/googletest-main/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND tests/googletest-main/googletest/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\tomma\CLionProjects\Tommaso_Puzzo_ChatUtenti\cmake-build-debug\tests\googletest-main\googletest && "C:\Users\tomma\AppData\Local\JetBrains\CLion 2019.2.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build tests/googletest-main/googletest/install/strip: phony tests/googletest-main/googletest/CMakeFiles/install/strip.util
+
 # =============================================================================
 # Target aliases.
 
 build Tommaso_Puzzo_ChatUtenti: phony Tommaso_Puzzo_ChatUtenti.exe
+
+build gmock: phony lib/libgmock.a
+
+build gmock_main: phony lib/libgmock_main.a
+
+build gtest: phony lib/libgtest.a
+
+build gtest_main: phony lib/libgtest_main.a
+
+build libgmock.a: phony lib/libgmock.a
+
+build libgmock_main.a: phony lib/libgmock_main.a
+
+build libgtest.a: phony lib/libgtest.a
+
+build libgtest_main.a: phony lib/libgtest_main.a
+
+build tests: phony tests/tests.exe
+
+build tests.exe: phony tests/tests.exe
 
 # =============================================================================
 # Folder targets.
@@ -133,7 +644,35 @@ build Tommaso_Puzzo_ChatUtenti: phony Tommaso_Puzzo_ChatUtenti.exe
 #############################################
 # Folder: C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/cmake-build-debug
 
-build all: phony Tommaso_Puzzo_ChatUtenti.exe
+build all: phony Tommaso_Puzzo_ChatUtenti.exe tests/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/cmake-build-debug/tests
+
+build tests/all: phony tests/tests.exe tests/googletest-main/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/cmake-build-debug/tests/googletest-main
+
+build tests/googletest-main/all: phony tests/googletest-main/googlemock/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/cmake-build-debug/tests/googletest-main/googlemock
+
+build tests/googletest-main/googlemock/all: phony lib/libgmock.a lib/libgmock_main.a tests/googletest-main/googletest/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/cmake-build-debug/tests/googletest-main/googletest
+
+build tests/googletest-main/googletest/all: phony lib/libgtest.a lib/libgtest_main.a
 
 # =============================================================================
 # Built-in targets
@@ -142,14 +681,14 @@ build all: phony Tommaso_Puzzo_ChatUtenti.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDependentOption.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/GNUInstallDirs.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/CMakeLists.txt C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/CMakeLists.txt C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/CMakeLists.txt C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock/CMakeLists.txt C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock/cmake/gmock.pc.in C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock/cmake/gmock_main.pc.in C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/CMakeLists.txt C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/cmake/Config.cmake.in C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/cmake/gtest.pc.in C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/cmake/gtest_main.pc.in C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/cmake/internal_utils.cmake CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake: phony
+build C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDependentOption.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/GNUInstallDirs.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/Users/tomma/AppData/Local/JetBrains/CLion$ 2019.2.3/bin/cmake/win/x64/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/CMakeLists.txt C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/CMakeLists.txt C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/CMakeLists.txt C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock/CMakeLists.txt C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock/cmake/gmock.pc.in C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock/cmake/gmock_main.pc.in C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/CMakeLists.txt C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/cmake/Config.cmake.in C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/cmake/gtest.pc.in C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/cmake/gtest_main.pc.in C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/cmake/internal_utils.cmake CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake: phony
 
 
 #############################################

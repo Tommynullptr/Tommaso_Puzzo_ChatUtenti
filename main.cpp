@@ -12,6 +12,8 @@ int main() {
     shared_ptr<Message> message1 = make_shared<Message>("Saluti");
     user1->sendMessage(message1, user2);
 
+    ChatLog::getInstance()->displayChatLog();
+
 
 
 }

@@ -12,3 +12,5 @@ add_executable(Tommaso_Puzzo_ChatUtenti main.cpp
         Message.h
         User.cpp
         User.h)
+
+add_subdirectory(tests)
