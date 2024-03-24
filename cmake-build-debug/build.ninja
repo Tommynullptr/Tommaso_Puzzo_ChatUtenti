@@ -183,12 +183,26 @@ build tests/CMakeFiles/tests.dir/runAllTests.cpp.obj: CXX_COMPILER__tests_unscan
   OBJECT_DIR = tests\CMakeFiles\tests.dir
   OBJECT_FILE_DIR = tests\CMakeFiles\tests.dir
 
-build tests/CMakeFiles/tests.dir/UserFixture.cpp.obj: CXX_COMPILER__tests_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/UserFixture.cpp || cmake_object_order_depends_target_tests
-  DEP_FILE = tests\CMakeFiles\tests.dir\UserFixture.cpp.obj.d
+build tests/CMakeFiles/tests.dir/UserTest.cpp.obj: CXX_COMPILER__tests_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/UserTest.cpp || cmake_object_order_depends_target_tests
+  DEP_FILE = tests\CMakeFiles\tests.dir\UserTest.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
   INCLUDES = -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
   OBJECT_DIR = tests\CMakeFiles\tests.dir
   OBJECT_FILE_DIR = tests\CMakeFiles\tests.dir
+
+build tests/CMakeFiles/tests.dir/__/User.cpp.obj: CXX_COMPILER__tests_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/User.cpp || cmake_object_order_depends_target_tests
+  DEP_FILE = tests\CMakeFiles\tests.dir\__\User.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
+  OBJECT_DIR = tests\CMakeFiles\tests.dir
+  OBJECT_FILE_DIR = tests\CMakeFiles\tests.dir\__
+
+build tests/CMakeFiles/tests.dir/__/Chat.cpp.obj: CXX_COMPILER__tests_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/Chat.cpp || cmake_object_order_depends_target_tests
+  DEP_FILE = tests\CMakeFiles\tests.dir\__\Chat.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
+  OBJECT_DIR = tests\CMakeFiles\tests.dir
+  OBJECT_FILE_DIR = tests\CMakeFiles\tests.dir\__
 
 
 # =============================================================================
@@ -198,7 +212,7 @@ build tests/CMakeFiles/tests.dir/UserFixture.cpp.obj: CXX_COMPILER__tests_unscan
 #############################################
 # Link the executable tests\tests.exe
 
-build tests/tests.exe: CXX_EXECUTABLE_LINKER__tests_Debug tests/CMakeFiles/tests.dir/runAllTests.cpp.obj tests/CMakeFiles/tests.dir/UserFixture.cpp.obj | lib/libgtest.a lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
+build tests/tests.exe: CXX_EXECUTABLE_LINKER__tests_Debug tests/CMakeFiles/tests.dir/runAllTests.cpp.obj tests/CMakeFiles/tests.dir/UserTest.cpp.obj tests/CMakeFiles/tests.dir/__/User.cpp.obj tests/CMakeFiles/tests.dir/__/Chat.cpp.obj | lib/libgtest.a lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
   FLAGS = -g
   LINK_LIBRARIES = lib/libgtest.a  lib/libgtest_main.a  lib/libgtest.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = tests\CMakeFiles\tests.dir
