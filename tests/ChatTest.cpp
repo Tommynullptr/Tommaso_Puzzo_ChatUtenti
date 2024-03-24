@@ -44,8 +44,7 @@ TEST_F(ChatTestSuite, SettersTest) {
 
 TEST_F(ChatTestSuite, AddMessageTest) {
 
-    //sendMessage will call addMessage
-    user1->sendMessage(message, user2);
+    chat->addMessage(message);
 
     EXPECT_EQ(chat->getMessages().size(), 1);
 
