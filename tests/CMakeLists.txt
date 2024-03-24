@@ -11,6 +11,9 @@ add_executable(tests runAllTests.cpp
         ../Chat.cpp
         ../Message.cpp
         ../ChatLog.cpp
+        MessageTest.cpp
+        ChatTest.cpp
+        ChatLogTest.cpp
 )
 
 target_link_libraries(tests gtest gtest_main)

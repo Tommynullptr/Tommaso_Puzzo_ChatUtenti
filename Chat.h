@@ -31,6 +31,9 @@ public:
 
     const shared_ptr<User> &getUser2() const;
 
+    const vector<shared_ptr<Message>> &getMessages() const;
+
+
     void setUser1(const shared_ptr<User> &user1);
 
     void setUser2(const shared_ptr<User> &user2);

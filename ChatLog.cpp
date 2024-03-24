@@ -17,6 +17,14 @@ ChatLog::~ChatLog() {
 
 
 
+const vector<shared_ptr<Chat>> &ChatLog::getChats() const {
+
+    return chats;
+
+}
+
+
+
 void ChatLog::addChat(shared_ptr<Chat> chat) {
 
     chats.push_back(chat);

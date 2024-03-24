@@ -26,13 +26,17 @@ public:
     ~ChatLog();
 
 
-    void addChat(shared_ptr<Chat> chat);
+    const vector<shared_ptr<Chat>> &getChats() const;
 
-    void displayChatLog () const;
 
     static shared_ptr<ChatLog> getInstance();
 
     static void destroyInstance();
+
+
+    void addChat(shared_ptr<Chat> chat);
+
+    void displayChatLog () const;
 
 };
 

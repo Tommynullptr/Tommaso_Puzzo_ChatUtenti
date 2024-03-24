@@ -25,6 +25,14 @@ const shared_ptr<User> &Chat::getUser2() const {
 
 }
 
+const vector<shared_ptr<Message>> &Chat::getMessages() const {
+
+    return messages;
+
+}
+
+
+
 void Chat::setUser1(const shared_ptr<User> &user1) {
 
     Chat::user1 = user1;
