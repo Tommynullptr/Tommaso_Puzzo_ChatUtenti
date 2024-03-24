@@ -62,13 +62,14 @@ TEST_F(UserTestSuite, AddChatTest) {
     user1->addChat(chat);
 
     EXPECT_TRUE(user1->findChatWith(user2));
+    EXPECT_TRUE(user2->findChatWith(user1));
 
 }
 
 
 TEST_F(UserTestSuite, SendMessageTest) {
 
-    shared_ptr<Message> message = make_shared<Message>("Saluti");
+    shared_ptr<Message> message = make_shared<Message>("Saluti","Come stai?");
     user1->sendMessage(message, user2);
 
     EXPECT_TRUE(user1->findChatWith(user2));

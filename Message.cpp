@@ -11,6 +11,9 @@ Message::Message(const string &object) : object(object) {
 
 }
 
+Message::Message(const string &object, const string &text) : object(object), text(text) {
+}
+
 Message::~Message() {
 }
 
@@ -42,7 +45,7 @@ const shared_ptr<User> &Message::getReceiver() const {
 
 void Message::setText() {
 
-    cout << "Insert the text of the message" << endl;
+    cout << "Insert the text of the message:" << endl;
     cin >> text;
 
 }

@@ -179,28 +179,42 @@ build cmake_object_order_depends_target_tests: phony || cmake_object_order_depen
 build tests/CMakeFiles/tests.dir/runAllTests.cpp.obj: CXX_COMPILER__tests_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/runAllTests.cpp || cmake_object_order_depends_target_tests
   DEP_FILE = tests\CMakeFiles\tests.dir\runAllTests.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
+  INCLUDES = -IC:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
   OBJECT_DIR = tests\CMakeFiles\tests.dir
   OBJECT_FILE_DIR = tests\CMakeFiles\tests.dir
 
 build tests/CMakeFiles/tests.dir/UserTest.cpp.obj: CXX_COMPILER__tests_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/UserTest.cpp || cmake_object_order_depends_target_tests
   DEP_FILE = tests\CMakeFiles\tests.dir\UserTest.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
+  INCLUDES = -IC:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
   OBJECT_DIR = tests\CMakeFiles\tests.dir
   OBJECT_FILE_DIR = tests\CMakeFiles\tests.dir
 
 build tests/CMakeFiles/tests.dir/__/User.cpp.obj: CXX_COMPILER__tests_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/User.cpp || cmake_object_order_depends_target_tests
   DEP_FILE = tests\CMakeFiles\tests.dir\__\User.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
+  INCLUDES = -IC:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
   OBJECT_DIR = tests\CMakeFiles\tests.dir
   OBJECT_FILE_DIR = tests\CMakeFiles\tests.dir\__
 
 build tests/CMakeFiles/tests.dir/__/Chat.cpp.obj: CXX_COMPILER__tests_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/Chat.cpp || cmake_object_order_depends_target_tests
   DEP_FILE = tests\CMakeFiles\tests.dir\__\Chat.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
+  INCLUDES = -IC:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
+  OBJECT_DIR = tests\CMakeFiles\tests.dir
+  OBJECT_FILE_DIR = tests\CMakeFiles\tests.dir\__
+
+build tests/CMakeFiles/tests.dir/__/Message.cpp.obj: CXX_COMPILER__tests_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/Message.cpp || cmake_object_order_depends_target_tests
+  DEP_FILE = tests\CMakeFiles\tests.dir\__\Message.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
+  OBJECT_DIR = tests\CMakeFiles\tests.dir
+  OBJECT_FILE_DIR = tests\CMakeFiles\tests.dir\__
+
+build tests/CMakeFiles/tests.dir/__/ChatLog.cpp.obj: CXX_COMPILER__tests_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/ChatLog.cpp || cmake_object_order_depends_target_tests
+  DEP_FILE = tests\CMakeFiles\tests.dir\__\ChatLog.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
   OBJECT_DIR = tests\CMakeFiles\tests.dir
   OBJECT_FILE_DIR = tests\CMakeFiles\tests.dir\__
 
@@ -212,7 +226,7 @@ build tests/CMakeFiles/tests.dir/__/Chat.cpp.obj: CXX_COMPILER__tests_unscanned_
 #############################################
 # Link the executable tests\tests.exe
 
-build tests/tests.exe: CXX_EXECUTABLE_LINKER__tests_Debug tests/CMakeFiles/tests.dir/runAllTests.cpp.obj tests/CMakeFiles/tests.dir/UserTest.cpp.obj tests/CMakeFiles/tests.dir/__/User.cpp.obj tests/CMakeFiles/tests.dir/__/Chat.cpp.obj | lib/libgtest.a lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
+build tests/tests.exe: CXX_EXECUTABLE_LINKER__tests_Debug tests/CMakeFiles/tests.dir/runAllTests.cpp.obj tests/CMakeFiles/tests.dir/UserTest.cpp.obj tests/CMakeFiles/tests.dir/__/User.cpp.obj tests/CMakeFiles/tests.dir/__/Chat.cpp.obj tests/CMakeFiles/tests.dir/__/Message.cpp.obj tests/CMakeFiles/tests.dir/__/ChatLog.cpp.obj | lib/libgtest.a lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
   FLAGS = -g
   LINK_LIBRARIES = lib/libgtest.a  lib/libgtest_main.a  lib/libgtest.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = tests\CMakeFiles\tests.dir
@@ -374,7 +388,7 @@ build cmake_object_order_depends_target_gmock: phony || cmake_object_order_depen
 build tests/googletest-main/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj: CXX_COMPILER__gmock_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
   DEP_FILE = tests\googletest-main\googlemock\CMakeFiles\gmock.dir\src\gmock-all.cc.obj.d
   FLAGS = -g -std=c++14 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
-  INCLUDES = -IC:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock/include -IC:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
+  INCLUDES = -IC:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti -IC:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock/include -IC:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
   OBJECT_DIR = tests\googletest-main\googlemock\CMakeFiles\gmock.dir
   OBJECT_FILE_DIR = tests\googletest-main\googlemock\CMakeFiles\gmock.dir\src
 
@@ -406,7 +420,7 @@ build cmake_object_order_depends_target_gmock_main: phony || cmake_object_order_
 build tests/googletest-main/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj: CXX_COMPILER__gmock_main_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
   DEP_FILE = tests\googletest-main\googlemock\CMakeFiles\gmock_main.dir\src\gmock_main.cc.obj.d
   FLAGS = -g -std=c++14 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
-  INCLUDES = -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
+  INCLUDES = -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googlemock -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
   OBJECT_DIR = tests\googletest-main\googlemock\CMakeFiles\gmock_main.dir
   OBJECT_FILE_DIR = tests\googletest-main\googlemock\CMakeFiles\gmock_main.dir\src
 
@@ -508,7 +522,7 @@ build cmake_object_order_depends_target_gtest: phony || tests/googletest-main/go
 build tests/googletest-main/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj: CXX_COMPILER__gtest_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
   DEP_FILE = tests\googletest-main\googletest\CMakeFiles\gtest.dir\src\gtest-all.cc.obj.d
   FLAGS = -g -std=c++14 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
-  INCLUDES = -IC:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -IC:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
+  INCLUDES = -IC:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti -IC:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -IC:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
   OBJECT_DIR = tests\googletest-main\googletest\CMakeFiles\gtest.dir
   OBJECT_FILE_DIR = tests\googletest-main\googletest\CMakeFiles\gtest.dir\src
 
@@ -540,7 +554,7 @@ build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_
 build tests/googletest-main/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj: CXX_COMPILER__gtest_main_unscanned_Debug C$:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
   DEP_FILE = tests\googletest-main\googletest\CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj.d
   FLAGS = -g -std=c++14 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
-  INCLUDES = -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
+  INCLUDES = -IC:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest/include -isystem C:/Users/tomma/CLionProjects/Tommaso_Puzzo_ChatUtenti/tests/googletest-main/googletest
   OBJECT_DIR = tests\googletest-main\googletest\CMakeFiles\gtest_main.dir
   OBJECT_FILE_DIR = tests\googletest-main\googletest\CMakeFiles\gtest_main.dir\src
 

@@ -26,6 +26,9 @@ public:
 
     Message (const string &object);
 
+    //secondary constructor with text
+    Message (const string &object, const string &text);
+
     ~Message();
 
 
