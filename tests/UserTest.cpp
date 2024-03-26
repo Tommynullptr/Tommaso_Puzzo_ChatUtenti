@@ -68,3 +68,12 @@ TEST_F(UserTestSuite, SendMessageTest) {
     EXPECT_TRUE(user1->findChatWith(user2));
 
 }
+
+TEST_F(UserTestSuite, NicknameIsUsedTest) {
+
+    EXPECT_TRUE(User::nicknameIsUsed("Tommy37"));
+    EXPECT_TRUE(User::nicknameIsUsed("Giovannino"));
+
+    EXPECT_FALSE(User::nicknameIsUsed("Luca"));
+
+}

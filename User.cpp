@@ -8,7 +8,23 @@
 #include "Message.h"
 
 
+vector<string> User::nicknames;
+
+
 User::User(const string &nickname, const string &name, const string &surname) : nickname(nickname), name(name), surname(surname){
+
+    if (nicknameIsUsed(nickname)) {
+
+        cout << "Nickname already taken!" << endl;
+        this->~User();
+
+    } else {
+
+        nicknames.push_back(nickname);
+        cout << "User created!" << endl;
+
+    }
+
 }
 
 User::~User() {
@@ -101,6 +117,22 @@ shared_ptr<Chat> User::CreateChatWith(const shared_ptr<User> &user) {
     cout << "Chat created with " << user->getName() << endl;
 
     return chat;
+
+}
+
+bool User::nicknameIsUsed(const string &nickname) {
+
+    for (const auto& n : nicknames) {
+
+        if (n == nickname) {
+
+            return true;
+
+        }
+
+    }
+
+    return false;
 
 }
 

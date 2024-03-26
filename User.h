@@ -34,6 +34,8 @@ private:
 
     vector<shared_ptr<Chat>> chats;
 
+    static vector<string> nicknames;
+
 public:
 
     User(const string &nickname, const string &name, const string &surname);
@@ -55,6 +57,8 @@ public:
     bool findChatWith(const shared_ptr<User> &user);
 
     shared_ptr<Chat> CreateChatWith(const shared_ptr<User> &user);
+
+    static bool nicknameIsUsed(const string &nickname);
 
 };
 
