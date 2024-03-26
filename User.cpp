@@ -16,7 +16,6 @@ User::User(const string &nickname, const string &name, const string &surname) : 
     if (nicknameIsUsed(nickname)) {
 
         cout << "Nickname already taken!" << endl;
-        this->~User();
 
     } else {
 
@@ -28,6 +27,11 @@ User::User(const string &nickname, const string &name, const string &surname) : 
 }
 
 User::~User() {
+
+    deleteNickname(nickname);
+
+    cout << "User deleted!" << endl;
+
 }
 
 
@@ -133,6 +137,21 @@ bool User::nicknameIsUsed(const string &nickname) {
     }
 
     return false;
+
+}
+
+void User::deleteNickname(const string &nickname) {
+
+    for (auto it = nicknames.begin(); it != nicknames.end(); it++) {
+
+        if (*it == nickname) {
+
+            nicknames.erase(it);
+            break;
+
+        }
+
+    }
 
 }
 

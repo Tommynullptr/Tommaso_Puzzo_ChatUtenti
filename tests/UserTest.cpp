@@ -22,6 +22,13 @@ protected:
 
     }
 
+    void TearDown() override {
+
+        user1.reset();
+        user2.reset();
+
+    }
+
 };
 
 
@@ -32,6 +39,15 @@ TEST_F(UserTestSuite, ConstructorTest) {
     EXPECT_EQ(user1->getNickname(), "Tommy37");
     EXPECT_EQ(user1->getName(), "Tommaso");
     EXPECT_EQ(user1->getSurname(), "Puzzo");
+
+}
+
+
+TEST_F(UserTestSuite, DestructorTest) {
+
+    user1.reset();
+
+    EXPECT_FALSE(User::nicknameIsUsed("Tommy37"));
 
 }
 
@@ -68,6 +84,7 @@ TEST_F(UserTestSuite, SendMessageTest) {
     EXPECT_TRUE(user1->findChatWith(user2));
 
 }
+
 
 TEST_F(UserTestSuite, NicknameIsUsedTest) {
 

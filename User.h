@@ -60,6 +60,8 @@ public:
 
     static bool nicknameIsUsed(const string &nickname);
 
+    static void deleteNickname(const string &nickname);
+
 };
 
 #endif //TOMMASO_PUZZO_CHATUTENTI_USER_H
