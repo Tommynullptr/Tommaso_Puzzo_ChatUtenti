@@ -36,6 +36,8 @@ protected:
 
         ChatLog::destroyInstance();
 
+        User::clearNicknames();
+
     }
 
 };

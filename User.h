@@ -62,6 +62,8 @@ public:
 
     static void deleteNickname(const string &nickname);
 
+    static void clearNicknames();
+
 };
 
 #endif //TOMMASO_PUZZO_CHATUTENTI_USER_H

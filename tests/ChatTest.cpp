@@ -31,6 +31,17 @@ protected:
 
     }
 
+    void TearDown() override {
+
+        user1.reset();
+        user2.reset();
+        chat.reset();
+        message.reset();
+
+        User::clearNicknames();
+
+    }
+
 };
 
 

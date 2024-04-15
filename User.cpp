@@ -155,3 +155,10 @@ void User::deleteNickname(const string &nickname) {
 }
 
 
+void User::clearNicknames() {
+
+    nicknames.clear();
+
+}
+
+

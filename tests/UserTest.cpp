@@ -27,6 +27,8 @@ protected:
         user1.reset();
         user2.reset();
 
+        User::clearNicknames();
+
     }
 
 };
@@ -96,18 +98,22 @@ TEST_F(UserTestSuite, NicknameIsUsedTest) {
 }
 
 
-TEST_F(UserTestSuite, ConstructorThrowsExceptionTest) {
+TEST_F(UserTestSuite, ConstructorExceptionTest) {
 
-    try {
+    string usedNickname = "Tommy37";
 
-        auto user = make_shared<User>("Tommy37", "Paolo", "Oloap");
-        FAIL() << "Expected invalid_argument exception";
+    EXPECT_THROW({
+        try {
 
-    } catch(const invalid_argument& e) {
+            auto user = make_shared<User>(usedNickname, "Name", "Surname");
 
-        EXPECT_STREQ("Nickname already used!", e.what());
+        } catch(const invalid_argument& e) {
 
-    }
+            EXPECT_STREQ("Nickname already used!", e.what());
+            throw; // Rilanciare l'eccezione per far fallire il test
+
+        }
+
+        }, invalid_argument);
 
 }
-

@@ -26,6 +26,16 @@ protected:
 
     }
 
+    void TearDown() override {
+
+        user1.reset();
+        user2.reset();
+        message.reset();
+
+        User::clearNicknames();
+
+    }
+
 };
 
 
