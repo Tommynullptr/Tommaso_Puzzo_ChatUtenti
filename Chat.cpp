@@ -25,9 +25,15 @@ const shared_ptr<User> &Chat::getUser2() const {
 
 }
 
-const vector<shared_ptr<Message>> &Chat::getMessages() const {
+const vector<shared_ptr<Message>> &Chat::getReadMessages() const {
 
-    return messages;
+    return readMessages;
+
+}
+
+const vector<shared_ptr<Message>> &Chat::getUnreadMessages() const {
+
+    return unreadMessages;
 
 }
 
@@ -49,21 +55,46 @@ void Chat::setUser2(const shared_ptr<User> &user2) {
 
 void Chat::addMessage(const shared_ptr<Message> &message) {
 
-    messages.push_back(message);
+    unreadMessages.push_back(message);
 
 }
 
-void Chat::displayChat() const {
+void Chat::displayReadMessages() const {
 
     cout << "Chat between " << user1->getName() << " and " << user2->getName() << endl;
 
+    displayMessages(readMessages);
+
+}
+
+void Chat::displayUnreadMessages() {
+
+    cout << "Unread messages in chat between " << user1->getName() << " and " << user2->getName() << endl;
+
+    displayMessages(unreadMessages);
+
+    moveMessages();
+
+}
+
+void Chat::displayMessages(const vector<shared_ptr<Message>> &messages) const {
+
     for (const auto& message : messages) {
 
-        cout << "Object: " << message->getObject() << endl;
-        cout << "Text: " << message->getText() << endl;
-        cout << "Sender: " << message->getSender()->getName() << endl;
-        cout << "Receiver: " << message->getReceiver()->getName() << endl;
+        message->display();
 
     }
+
+}
+
+void Chat::moveMessages() {
+
+    for (const auto& message : unreadMessages) {
+
+        readMessages.push_back(message);
+
+    }
+
+    unreadMessages.clear();
 
 }

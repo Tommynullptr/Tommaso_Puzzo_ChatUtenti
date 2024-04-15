@@ -43,6 +43,8 @@ const shared_ptr<User> &Message::getReceiver() const {
 
 }
 
+
+
 void Message::setText() {
 
     cout << "Insert the text of the message:" << endl;
@@ -59,5 +61,16 @@ void Message::setSender(const shared_ptr<User> &sender) {
 void Message::setReceiver(const shared_ptr<User> &receiver) {
 
     Message::receiver = receiver;
+
+}
+
+
+
+void Message::display() const {
+
+    cout << "Object: " << object << endl;
+    cout << "Text: " << text << endl;
+    cout << "Sender: " << sender->getName() << endl;
+    cout << "Receiver: " << receiver->getName() << endl;
 
 }

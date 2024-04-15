@@ -35,7 +35,7 @@ void ChatLog::displayChatLog() const {
 
     for (const auto& chat : chats) {
 
-        chat->displayChat();
+        chat->displayReadMessages();
 
     }
 

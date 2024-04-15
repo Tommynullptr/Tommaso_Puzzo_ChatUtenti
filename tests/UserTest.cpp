@@ -94,3 +94,20 @@ TEST_F(UserTestSuite, NicknameIsUsedTest) {
     EXPECT_FALSE(User::nicknameIsUsed("Luca"));
 
 }
+
+
+TEST_F(UserTestSuite, ConstructorThrowsExceptionTest) {
+
+    try {
+
+        auto user = make_shared<User>("Tommy37", "Paolo", "Oloap");
+        FAIL() << "Expected invalid_argument exception";
+
+    } catch(const invalid_argument& e) {
+
+        EXPECT_STREQ("Nickname already used!", e.what());
+
+    }
+
+}
+

@@ -46,6 +46,19 @@ TEST_F(ChatTestSuite, AddMessageTest) {
 
     chat->addMessage(message);
 
-    EXPECT_EQ(chat->getMessages().size(), 1);
+    EXPECT_EQ(chat->getUnreadMessages().size(), 1);
+    EXPECT_EQ(chat->getReadMessages().size(), 0);
+
+}
+
+
+TEST_F(ChatTestSuite, DisplayUnreadMessagesTest) {
+
+    chat->addMessage(message);
+
+    chat->displayUnreadMessages();
+
+    EXPECT_EQ(chat->getUnreadMessages().size(), 0);
+    EXPECT_EQ(chat->getReadMessages().size(), 1);
 
 }

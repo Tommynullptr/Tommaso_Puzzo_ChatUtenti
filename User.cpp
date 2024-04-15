@@ -13,14 +13,15 @@ vector<string> User::nicknames;
 
 User::User(const string &nickname, const string &name, const string &surname) : nickname(nickname), name(name), surname(surname){
 
-    if (nicknameIsUsed(nickname)) {
+    //TODO check if the nickname is not used else throw an exception (+test)
 
-        cout << "Nickname already taken!" << endl;
+    if (!nicknameIsUsed(nickname)) {
+
+        nicknames.push_back(nickname);
 
     } else {
 
-        nicknames.push_back(nickname);
-        cout << "User created!" << endl;
+        throw invalid_argument("Nickname already used!");
 
     }
 
@@ -29,8 +30,6 @@ User::User(const string &nickname, const string &name, const string &surname) : 
 User::~User() {
 
     deleteNickname(nickname);
-
-    cout << "User deleted!" << endl;
 
 }
 

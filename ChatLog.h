@@ -33,6 +33,9 @@ public:
 
     static void destroyInstance();
 
+    //TODO metodo per chiedere se una chat tra 2 user è presente nel chatlog + testare
+
+    //TODO una volta fatte tutte le modifiche richieste mandare mail con link alla repository
 
     void addChat(shared_ptr<Chat> chat);
 

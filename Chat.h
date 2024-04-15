@@ -18,7 +18,9 @@ private:
 
     shared_ptr<User> user2;
 
-    vector<shared_ptr<Message>> messages;
+    vector<shared_ptr<Message>> unreadMessages;
+
+    vector<shared_ptr<Message>> readMessages;
 
 public:
 
@@ -31,7 +33,9 @@ public:
 
     const shared_ptr<User> &getUser2() const;
 
-    const vector<shared_ptr<Message>> &getMessages() const;
+    const vector<shared_ptr<Message>> &getReadMessages() const;
+
+    const vector<shared_ptr<Message>> &getUnreadMessages() const;
 
 
     void setUser1(const shared_ptr<User> &user1);
@@ -41,7 +45,15 @@ public:
 
     void addMessage(const shared_ptr<Message> &message);
 
-    void displayChat() const;
+    void displayReadMessages() const;
+
+    //aggiungere messaggi letti e non letti + metodi e fare test
+
+    void displayUnreadMessages();
+
+    void displayMessages(const vector<shared_ptr<Message>> &messages) const;
+
+    void moveMessages();
 
 };
 
