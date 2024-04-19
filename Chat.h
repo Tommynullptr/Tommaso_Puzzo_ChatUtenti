@@ -47,7 +47,7 @@ public:
 
     void displayReadMessages() const;
 
-    //aggiungere messaggi letti e non letti + metodi e fare test
+    //DONE aggiungere messaggi letti e non letti + metodi e fare test
 
     void displayUnreadMessages();
 

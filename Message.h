@@ -26,7 +26,7 @@ public:
 
     Message (const string &object);
 
-    //secondary constructor with text
+    //costruttore secondario per testing con text come parametro
     Message (const string &object, const string &text);
 
     ~Message();

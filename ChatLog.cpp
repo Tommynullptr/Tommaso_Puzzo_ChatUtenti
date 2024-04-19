@@ -58,3 +58,37 @@ void ChatLog::destroyInstance() {
     instance.reset();
 
 }
+
+
+shared_ptr<Chat> ChatLog::getChatBetween(const shared_ptr<User> &user1, const shared_ptr<User> &user2) {
+
+    for (const auto& chat : chats) {
+
+        if ((chat->getUser1() == user1 && chat->getUser2() == user2) || (chat->getUser1() == user2 && chat->getUser2() == user1)) {
+
+            return chat;
+
+        }
+
+    }
+
+    return nullptr;
+
+}
+
+
+bool ChatLog::findChatBetween(const shared_ptr<User> &user1, const shared_ptr<User> &user2) {
+
+    for (const auto& chat : chats) {
+
+        if ((chat->getUser1() == user1 && chat->getUser2() == user2) || (chat->getUser1() == user2 && chat->getUser2() == user1)) {
+
+            return true;
+
+        }
+
+    }
+
+    return false;
+
+}

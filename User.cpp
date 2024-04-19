@@ -13,7 +13,7 @@ vector<string> User::nicknames;
 
 User::User(const string &nickname, const string &name, const string &surname) : nickname(nickname), name(name), surname(surname){
 
-    //TODO check if the nickname is not used else throw an exception (+test)
+    //DONE controlla che il nickname non sia già stato usato (+test)
 
     if (!nicknameIsUsed(nickname)) {
 
@@ -61,6 +61,8 @@ void User::addChat(const shared_ptr<Chat> &chat) {
 
 }
 
+
+
 void User::sendMessage(const shared_ptr<Message> &message, const shared_ptr<User> &receiver) {
 
     message->setSender(shared_from_this());
@@ -89,6 +91,8 @@ void User::sendMessage(const shared_ptr<Message> &message, const shared_ptr<User
 
 }
 
+
+
 bool User::findChatWith(const shared_ptr<User> &user) {
 
     for (const auto& chat : chats) {
@@ -105,6 +109,8 @@ bool User::findChatWith(const shared_ptr<User> &user) {
 
 }
 
+
+
 shared_ptr<Chat> User::CreateChatWith(const shared_ptr<User> &user) {
 
     shared_ptr<Chat> chat = make_shared<Chat>();
@@ -117,11 +123,13 @@ shared_ptr<Chat> User::CreateChatWith(const shared_ptr<User> &user) {
     addChat(chat);
     user->addChat(chat);
 
-    cout << "Chat created with " << user->getName() << endl;
+    cout << "Chat created with " << user->getNickname() << endl;
 
     return chat;
 
 }
+
+
 
 bool User::nicknameIsUsed(const string &nickname) {
 
@@ -139,6 +147,8 @@ bool User::nicknameIsUsed(const string &nickname) {
 
 }
 
+
+
 void User::deleteNickname(const string &nickname) {
 
     for (auto it = nicknames.begin(); it != nicknames.end(); it++) {
@@ -153,6 +163,7 @@ void User::deleteNickname(const string &nickname) {
     }
 
 }
+
 
 
 void User::clearNicknames() {

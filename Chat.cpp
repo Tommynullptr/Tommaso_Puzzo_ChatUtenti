@@ -75,6 +75,8 @@ void Chat::displayUnreadMessages() {
 
     moveMessages();
 
+    cout << "Messages have been read!" << endl;
+
 }
 
 void Chat::displayMessages(const vector<shared_ptr<Message>> &messages) const {

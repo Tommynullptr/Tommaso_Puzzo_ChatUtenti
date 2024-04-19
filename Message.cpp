@@ -70,7 +70,7 @@ void Message::display() const {
 
     cout << "Object: " << object << endl;
     cout << "Text: " << text << endl;
-    cout << "Sender: " << sender->getName() << endl;
-    cout << "Receiver: " << receiver->getName() << endl;
+    cout << "Sender: " << sender->getNickname() << endl;
+    cout << "Receiver: " << receiver->getNickname() << endl;
 
 }

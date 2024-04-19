@@ -63,11 +63,13 @@ TEST_F(ChatTestSuite, AddMessageTest) {
 }
 
 
-TEST_F(ChatTestSuite, DisplayUnreadMessagesTest) {
+//test del corretto spostamento dei messaggi da non letti a letti
+
+TEST_F(ChatTestSuite, MoveMessagesTest) {
 
     chat->addMessage(message);
 
-    chat->displayUnreadMessages();
+    chat->moveMessages();
 
     EXPECT_EQ(chat->getUnreadMessages().size(), 0);
     EXPECT_EQ(chat->getReadMessages().size(), 1);

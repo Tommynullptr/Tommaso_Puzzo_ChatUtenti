@@ -33,9 +33,12 @@ public:
 
     static void destroyInstance();
 
-    //TODO metodo per chiedere se una chat tra 2 user è presente nel chatlog + testare
+    //DONE metodo per chiedere se una chat tra 2 user è presente nel chatlog + testare
+    //Una volta fatte tutte le modifiche richieste mandare mail con link alla repository
 
-    //TODO una volta fatte tutte le modifiche richieste mandare mail con link alla repository
+    shared_ptr<Chat> getChatBetween(const shared_ptr<User> &user1, const shared_ptr<User> &user2);
+
+    bool findChatBetween(const shared_ptr<User> &user1, const shared_ptr<User> &user2);
 
     void addChat(shared_ptr<Chat> chat);
 

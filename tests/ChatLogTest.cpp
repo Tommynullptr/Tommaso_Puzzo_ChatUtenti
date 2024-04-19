@@ -51,3 +51,27 @@ TEST_F(ChatLogTestSuite, AddChatTest) {
     EXPECT_EQ(chatLog->getChats().size(), 1);
 
 }
+
+
+//test per verificare che la chat tra due utenti sia presente nel chatlog
+
+TEST_F(ChatLogTestSuite, GetChatBetweenTest) {
+
+    chatLog->addChat(chat);
+
+    shared_ptr<Chat> foundChat = chatLog->getChatBetween(user1, user2);
+
+    EXPECT_EQ(foundChat, chat);
+
+}
+
+
+TEST_F(ChatLogTestSuite, FindChatBetweenTest) {
+
+    chatLog->addChat(chat);
+
+    bool found = chatLog->findChatBetween(user1, user2);
+
+    EXPECT_TRUE(found);
+
+}
