@@ -105,15 +105,15 @@ TEST_F(UserTestSuite, ConstructorExceptionTest) {
     EXPECT_THROW({
         try {
 
-            auto user = make_shared<User>(usedNickname, "Name", "Surname");
+        auto user = make_shared<User>(usedNickname, "Name", "Surname");
 
-        } catch(const invalid_argument& e) {
+    } catch(const invalid_argument& e) {
 
-            EXPECT_STREQ("Nickname already used!", e.what());
-            throw; // Rilanciare l'eccezione per far fallire il test
+        EXPECT_STREQ("Nickname already used!", e.what());
+        throw; // Rilanciare l'eccezione per far fallire il test
 
-        }
+    }
 
-        }, invalid_argument);
+                 }, invalid_argument);
 
 }

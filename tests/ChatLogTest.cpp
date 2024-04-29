@@ -75,3 +75,12 @@ TEST_F(ChatLogTestSuite, FindChatBetweenTest) {
     EXPECT_TRUE(found);
 
 }
+
+
+TEST_F(ChatLogTestSuite, ChatNotFoundTest) {
+
+        bool found = chatLog->findChatBetween(user1, user2);
+
+        EXPECT_FALSE(found);
+
+}
